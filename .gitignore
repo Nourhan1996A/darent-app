@@ -1,4 +1,9 @@
 target/
+.idea/
+*.iml
+.DS_Store
+*.log
+target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
