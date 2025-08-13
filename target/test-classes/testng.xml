@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Darent App Suite" verbose="1" parallel="false">
+    <test name="All Tests">
+        <listeners>
+            <listener class-name="com.darent.tests.listeners.AllureTestListener"/>
+        </listeners>
+        <classes>
+            <class name="com.darent.tests.SplashTest"/>
+            <class name="com.darent.tests.OnboardingScreensTest"/>
+            <class name="com.darent.tests.HomeScreenElementsTest"/>
+            <class name="com.darent.tests.FilterChaletsTest"/>
+            <class name="com.darent.tests.OpenPropertyFromFilteredListTest"/>
+            <class name="com.darent.tests.PropertyDetailsPageTest"/>
+            <class name="com.darent.tests.BookButtonTest"/>
+            <class name="com.darent.tests.LoginFlowTest"/>
+            <class name="com.darent.tests.DiscountSectionTest"/>
+            <class name="com.darent.tests.DarentFlowTest"/>
+        </classes>
+    </test>
+</suite>
+
+
