@@ -32,17 +32,30 @@ This structure ensures that if the app’s UI changes, only the page classes nee
 - `src/test/java/com/darent/tests/DarentFlowTest.java` (TestNG)
 - `src/test/resources/testng.xml`
 
-## ▶️ Run (with APK)
+## ▶️ Run
+1. Start Appium 2 and ensure UiAutomator2 is installed:
 ```
-mvn -Dapp.path="C:\path\to\darent.apk" test
+appium driver install uiautomator2
+appium -p 4723
 ```
-
-Or run installed app and override properties if needed:
+2. Connect a device/emulator and authorize it:
 ```
-mvn -Dappium.url=http://127.0.0.1:4723 -Ddevice.name="Android Emulator" -Dapp.package=com.darent -Dapp.activity=.MainActivity test
+adb devices
+```
+3. Ensure the Darent app is installed on the device with package `com.darent`.
+4. Run the tests:
+```
+mvn test
 ```
 
 Reports: `target/surefire-reports`.
+
+### Capabilities (hardcoded)
+The framework launches the installed app using only these capabilities:
+- `platformName`: Android
+- `appium:automationName`: UiAutomator2
+- `appium:app_package`: com.darent
+- `appium:app_activity`: .MainActivity
 
 ## 🔎 Locators to fill
 Edit under `src/test/java/com/darent/pages/`:
